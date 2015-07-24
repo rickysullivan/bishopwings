@@ -20,8 +20,11 @@
     combined_bg_move_speed: 0,
     combined_bg_vx: 0,
 
-    log_x: 40,
+    log_x: 0,
     log_y: 0,
+
+    geelong_x: 380,
+    geelong_y: 0,
 
     sky_gradient: {},
 
@@ -71,6 +74,8 @@
       this.ground_img.width = mit.W;
       this.ground_img.height = mit.H;
 
+      this.geelong_img = mit.image.geelong;
+
 
       // Grass
       // this.grass_img = new Image();
@@ -86,6 +91,7 @@
       // this.log_img.src = 'img/log.png';
       this.log_img = mit.image.log;
 
+      
 
       // Combined BG Image
       // this.combined_bg_img = new Image();
@@ -94,6 +100,8 @@
 
       // Reset all speed
       this.resetAllSpeed();
+
+      console.log(this);
     },
 
     resetAllSpeed: function() {
@@ -317,6 +325,17 @@
       return;
     },
 
+    drawGeelong: function(ctx) {
+
+       this.geelong_y = mit.H-(this.geelong_img.height+45);
+
+      ctx.drawImage(this.geelong_img, this.geelong_x, this.geelong_y);
+
+      if (mit.game_started) {
+        this.geelong_x -= this.ground_bg_move_speed * this.common_bg_speed;
+      }
+    },
+
     drawInitLog: function(ctx) {
 
       this.log_y = mit.H-(this.log_img.height+45);
@@ -402,18 +421,21 @@
         this.drawCombinedBG(ctx);
       }
 
+
       // Drawing the initial wood log on which
       // Pappu gonna sit and bask in the cool and cozy
       // environment.
-      if (this.log_x+100 > 0) {
+      if (this.log_x+599 > 0) {
         this.drawInitLog(ctx);
       }
       else if (!mit.game_started) {
-        this.log_x = 40;
+        this.log_x = 0;
       }
 
-      // Draw Ground now!
+       // Draw Ground now!
       this.drawGround(ctx);
+
+      
 
 
       // Increasing speed based on points

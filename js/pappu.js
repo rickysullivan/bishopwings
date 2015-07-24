@@ -22,15 +22,15 @@
     // per animation frame.
     change_per_frame: 10,
 
-    fly_frame_count: 0,
-    max_fly_frame_count: 10,
+    fly_frame_count: 4,
+    max_fly_frame_count: 4,
 
     init: function() {
       this.sound = document.getElementById("flap");
 
       // Initializing Pappu Sprite, lolzzz..!
-      // this.sprite = new Image();
-      // this.sprite.src = 'img/pappu.png';
+      //this.sprite = new Image();
+      //this.sprite.src = 'img/chopper-idle.gif';
       this.sprite = mit.image.pappu;
 
       //pappu.w = pappu.sprite.width;
@@ -38,13 +38,13 @@
       mit.Pappu.h = 60;
 
       // Sprite Frame Count
-      mit.Pappu.max_fly_frame_count = 8;
+      mit.Pappu.max_fly_frame_count = 4;
       mit.Pappu.max_fly_frame_count--;
 
       // Sprite Frame Change Speed.
       // This will affect the flap speed.
       // 1.6 is the perfect value!
-      mit.Pappu.change_per_frame = 1.6;
+      mit.Pappu.change_per_frame = 1.2;
 
       // X Pos
       mit.Pappu.x = 33;
@@ -59,6 +59,9 @@
     },
 
     draw: function(ctx) {
+
+      
+
       var cur_sprite_frame = this.fly_frame_count / this.change_per_frame;
       
       if (utils.isInt(cur_sprite_frame)) {
@@ -79,7 +82,7 @@
       if (mit.flying_up) {
         this.sound.play();
 
-        if (this.rotate_angle > -15) {
+        if (this.rotate_angle > -5) {
           this.rotate_angle -= 2;
         }
       }
@@ -91,7 +94,7 @@
         this.rotate_angle += 4;
       }
       else {
-        if (this.rotate_angle < 30) {
+        if (this.rotate_angle < 5) {
           this.rotate_angle += 2;
         }
       }
@@ -141,28 +144,35 @@
         var source_y = cur_sprite_frame * 60;
       }
 
+
       else {
         //var old_sprite_frame = parseInt(this.fly_frame_count/this.change_per_frame)%this.change_per_frame;
 
         // Ultra smooth animations
         var old_sprite_frame = parseInt(this.fly_frame_count/this.change_per_frame)
+
+        
+
+
         var source_y = old_sprite_frame * 60;
       }
 
 
-      this.y = mit.Backgrounds.log_y-42;
+      this.y = 400;
 
-      /*ctx.drawImage(
-        this.sprite,
-        0,
-        0,
-        this.w,
-        60,
-        this.x,
-        this.y,
-        this.w,
-        60
-      );*/
+     // this.y = mit.Backgrounds.log_y-42;
+
+      // ctx.drawImage(
+      //   this.sprite,
+      //   0,
+      //   0,
+      //   this.w,
+      //   60,
+      //   this.x,
+      //   this.y,
+      //   this.w,
+      //   60
+      // );
       
       ctx.drawImage(
         this.sprite,

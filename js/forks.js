@@ -149,7 +149,7 @@
     create: function() {
       var fork_img = this.fork_img,
           dig_img = this.dig_img,
-          fork_head_img = this.fork_head_img,
+         // fork_head_img = this.fork_head_img,
           forks = this.forks,
           count = this.count;
 
@@ -170,12 +170,12 @@
             // console.log(this.dig_img.width);
 
             fork.y = 200 + utils.randomNumber(0,100);
-            fork.y += fork_head_img.height;
+           // fork.y += fork_head_img.height;
           }
 
           if (fork.edge === 'top') {
             fork.y = 0 - utils.randomNumber(0,100);
-            fork.y -= fork_head_img.height;
+            //fork.y -= fork_head_img.height;
           }
 
           var pos = this.getRandomForkPos();
@@ -194,7 +194,7 @@
     draw: function(ctx) {
       var fork_img = this.fork_img,
           dig_img = this.dig_img,
-          fork_head_img = this.fork_head_img,
+         // fork_head_img = this.fork_head_img,
           forks = this.forks,
           dead_forks = 0;
 
@@ -228,40 +228,40 @@
           ctx.restore();
 
 
-          fork.head_x = fork.x-~~(fork_head_img.width/8);
-          fork.head_y = fork.y+fork_img.height;
+          //fork.head_x = fork.x-~~(fork_head_img.width/8);
+         // fork.head_y = fork.y+fork_img.height;
 
-          fork.head_w = fork_head_img.width;
-          fork.head_h = fork_head_img.height;
+         // fork.head_w = fork_head_img.width;
+         // fork.head_h = fork_head_img.height;
 
           // Draw Fork Head
           ctx.save();
-          ctx.translate(fork.head_x, fork.head_y);
-          ctx.translate(~~(fork_head_img.width/2), ~~(fork_head_img.height/2));
+        //  ctx.translate(fork.head_x, fork.head_y);
+         // ctx.translate(~~(fork_head_img.width/2), ~~(fork_head_img.height/2));
           ctx.rotate( utils.toRadian(180) );
-          ctx.drawImage(fork_head_img, -~~(fork_head_img.width/2), -~~(fork_head_img.height/2));
+        //  ctx.drawImage(fork_head_img, -~~(fork_head_img.width/2), -~~(fork_head_img.height/2));
           ctx.restore();
         }
         else if (fork.edge === 'btm') {
 
           ctx.drawImage(fork_img, fork.x, fork.y);
 
-          fork.head_x = fork.x-~~(fork_head_img.width/5);
-          fork.head_y = fork.y-fork_head_img.height;
+        //  fork.head_x = fork.x-~~(fork_head_img.width/5);
+         // fork.head_y = fork.y-fork_head_img.height;
 
-          fork.head_w = fork_head_img.width;
-          fork.head_h = fork_head_img.height;
+        //  fork.head_w = fork_head_img.width;
+        //  fork.head_h = fork_head_img.height;
 
           // Draw Fork Head
           ctx.save();
-          ctx.translate(fork.head_x, fork.head_y);
-          ctx.translate(1* ~~(fork_head_img.width/2), 1* ~~(fork_head_img.height/2));
-          ctx.scale(-1,1);
-          ctx.drawImage(
-            fork_head_img,
-            1* -~~(fork_head_img.width/2),
-            1* -~~(fork_head_img.height/2)
-          );
+         // ctx.translate(fork.head_x, fork.head_y);
+        //  ctx.translate(1* ~~(fork_head_img.width/2), 1* ~~(fork_head_img.height/2));
+         // ctx.scale(-1,1);
+        //  ctx.drawImage(
+         //   fork_head_img,
+         //   1* -~~(fork_head_img.width/2),
+         //   1* -~~(fork_head_img.height/2)
+        //  );
           ctx.restore();
         }
 

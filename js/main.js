@@ -119,6 +119,10 @@ mit.main = function() {
     // Hide the Start Screen
     ui.start_screen.fadeOut();
 
+    console.log();
+
+   // mit.Pappu.sprite.src = 'img/chopper-fly.png';
+
     // Start btn has been clicked
     // Game hasnt started. Game will
     // start on flight.
@@ -177,7 +181,7 @@ mit.main = function() {
 
     mit.highScore = JSON.parse(localStorage.getItem("highScore"));
     if (mit.highScore)
-      ui.high_score.text("High Score: "+ mit.highScore);
+      ui.high_score.text("High Score: $"+ mit.highScore);
 
   } catch (e) {}
 
@@ -295,11 +299,11 @@ mit.main = function() {
       mit.highScore = parseInt(mit.score);
       localStorage.setItem("highScore", JSON.stringify(parseInt(mit.score)));
 
-      ui.high_score.text("High Score: "+ mit.highScore);
+      ui.high_score.text("High Score: $"+ mit.highScore);
     }
 
     // Show last_score
-    ui.last_score.text("Last Score: " + parseInt(mit.score));
+    ui.last_score.text("Last Score: $" + parseInt(mit.score));
 
 
     ui.start_game.html('re-start');
@@ -352,6 +356,8 @@ mit.main = function() {
     // Draw Backgrounds on BG Canvas
     mit.Backgrounds.draw(bg_ctx);
 
+
+
     ctx.clearRect(0, 0, W, H);
 
     // Draw Digs (holds forks)
@@ -359,8 +365,7 @@ mit.main = function() {
     // just WANTS me to do this extra work :/
     // mit.ForkUtils.drawDigs(ctx);
 
-    // Draw Grass on Main Canvas
-    // mit.Backgrounds.drawGrass(ctx);
+  
 
     if (mit.flying_up || !mit.game_started)
       mit.Pappu.updateFlyFrameCount();
@@ -377,6 +382,13 @@ mit.main = function() {
       mit.gameOver();
       return;
     }
+
+  
+
+    // Draw Grass on Main Canvas
+    mit.Backgrounds.drawGrass(ctx);
+    mit.Backgrounds.drawGeelong(ctx);
+
 
     //mit.ForkUtils.draw(ctx);
     //mit.BranchUtils.draw(ctx);
@@ -398,6 +410,7 @@ mit.main = function() {
       mit.BranchUtils.draw(ctx);
       mit.CollectibleUtils.draw(ctx);
       mit.Pappu.drawClones(ctx);
+
 
       // Check Collisions with pappu
       if (!mit.Pappu.invincible) {
