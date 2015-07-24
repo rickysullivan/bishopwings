@@ -16,7 +16,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #FF6767;
+	background: #2A4E80 url(../img/mute.png) no-repeat;
 	z-index: 10;
 }
 
@@ -44,8 +44,29 @@ html, body {
 }
 
 body {
-	background: #000 url(http://i.imgur.com/XgUk6.jpg) top center no-repeat fixed;
+	background: #000;
 	font-family: 'Open Sans', Verdana;
+	height: 100%;
+}
+
+body::before {
+	background-image: url(../img/page-bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	content: '';
+	will-change: transform;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	position: fixed;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
 }
 
 h1, #loadText {
@@ -91,10 +112,14 @@ h1, #loadText {
 
 .container {
 	position: relative;
-	margin: 20px auto 50px;
+	margin: 0 auto;
 	width: auto;
 	max-width: 1000px;
 	height: 500px;
+	top: 30px;
+	-webkit-box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
 }
 
 footer {
@@ -207,19 +232,27 @@ canvas#game_bg {
 	font-size: 67px;
 	line-height: 100px;
 	font-weight: normal;
-	color: #945430;
+	color: #c50012;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 	text-shadow: 3px 3px 0px white;
+	position: relative;
+	top: 20px;
 }
 
 #credits, #high_score, #last_score {
 	font: 36px 'Bangers', cursive;
-	color: white;
+	color: #c50012;
 	padding: 0;
 	text-align: center;
 	margin: -10px 0 10px;
+	text-shadow: 3px 3px 0px white;
+}
+
+#last_score, #high_score {
+	position: relative;
+	top: 50px;
 }
 
 #credits a {
