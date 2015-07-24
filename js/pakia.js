@@ -122,7 +122,7 @@
         // that is, in the air!
 
         // Object by Reference!
-        this.cur_pakia = this.pakias[utils.randomNumber(0,20)];
+        this.cur_pakia = this.pakias[utils.randomNumber(0,2)];
 
         this.cur_pakia.generateRandomPos();
         this.cur_pakia.generateRandomVelocity();

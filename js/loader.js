@@ -29,9 +29,9 @@
   ];
 
   var images = {
-    angry_pakia : "img/angry_pakia.png",
+    angry_pakia : "img/shorten_head.png",
     backtrees : "img/back_trees.png",
-    berries : "img/berries.png",
+    berries : "img/wine-bottle.png",
     bg_combined: "img/bg_combined.png",
     branch : "img/branch.png",
     clouds : "img/clouds.png",
@@ -39,20 +39,20 @@
     controls : "img/controls.png",
     //dig : "img/dig.png",
     fork_handle : "img/paper.png",
-    fork_head : "img/fork_head.png",
+//    fork_head : "img/fork_head.png",
     fronttrees : "img/front_trees.png",
     grass : "img/grass.png",
     ground : "img/ground.png",
-    happy_pakia : "img/happy_pakia.png",
+    happy_pakia : "img/abbott_head.png",
     log : "img/melbourne.png",
     geelong : "img/geelong.png",
     pappu : "img/chopper-idle.png",
     plank_bot : "img/plank_bot.png",
     plank_mid : "img/plank_mid.png",
     plank_top : "img/plank_top.png",
-    sad_pakia : "img/sad_pakia.png",
+    sad_pakia : "img/hockey_head.png",
     stand : "img/stand.png",
-    star : "img/star.png"
+    star : "img/mastercard.png"
   };
 
   mit.image = {};

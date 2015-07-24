@@ -169,7 +169,7 @@ mit.main = function() {
 
   // Share links
   var tweet = document.getElementById("tweet");
-  tweet.href='http://twitter.com/share?url=http://khele.in/pappu-pakia/&text=I am playing Pappu Pakia, a cute HTML5 game on khele.in!&count=horiztonal&via=_rishabhp&related=solitarydesigns';
+  tweet.href='http://twitter.com/share?url=http://khele.in/pappu-pakia/&text=I\'m playing Bronny Copter!&counturl=&count=horiztonal&via=rickysullivan&hastags=choppergate,meme,auspol,BronwynBishop,bronnycopter';
 
   var facebook = document.getElementById("fb");
   facebook.href='http://facebook.com/sharer.php?s=100&p[url]=http://khele.in/pappu-pakia/&p[title]=I am playing Pappu Pakia, a cute HTML5 game on khele.in!';
@@ -328,10 +328,10 @@ mit.main = function() {
 
     // Share
     var tweet = document.getElementById("tweet");
-    tweet.href='http://twitter.com/share?url=http://khele.in/pappu-pakia/&text=I just scored ' +Math.floor(mit.score)+ ' points in Pappu Pakia!&count=horiztonal&via=_rishabhp&related=solitarydesigns';
+    tweet.href='http://twitter.com/share?url=http://rickysullivan.github.io/bishopwings/&text=I just spent ' +Math.floor(mit.score)+ ' tax payers dollars in Bronny Copter!&counturl=&count=horiztonal&via=rickysullivan&hastags=choppergate,meme,auspol,BronwynBishop,bronnycopter';
   
     var facebook = document.getElementById("fb");
-    facebook.href='http://facebook.com/sharer.php?s=100&p[url]=http://khele.in/pappu-pakia/&p[title]=I just scored ' +Math.floor(mit.score)+ ' points in the Pappu Pakia!';
+    facebook.href='http://facebook.com/sharer.php?s=100&p[url]=http://rickysullivan.github.io/bishopwings/&p[title]=I just spent ' +Math.floor(mit.score)+ ' tax payers dollars in Bishop Wings';
 
   };
 

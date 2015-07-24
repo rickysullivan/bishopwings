@@ -122,45 +122,51 @@ h1, #loadText {
 	box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
 }
 
-footer {
-	margin: 20px auto;
-	padding: 0 0 20px;
+.about {
+	position: relative;
+	width: auto;
 	max-width: 1000px;
+	margin: 0 auto;
+	top: 50px;
+	background: #fff;
+	padding: 20px;
+	-webkit-box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 3px 50px -12px rgba(0, 0, 0, 0.75);
 }
 
-footer h3 {
-	color: #E7E7E7;
-	margin-top: 30px;
+.about h3 {
+	color: #545454;
 	font-size: 18px;
 	margin-bottom: 10px;
 }
 
-footer p {
+.about p {
 	margin-bottom: 10px;
 	font-size: 13px;
 	font-weight: normal;
-	color: #D1D1D1;
+	color: #858585;
 }
 
-footer a {
+.about a {
 	text-decoration: none;
 	color: #FF6767;
 }
 
-footer a:visited {
-	color: #7FFF67;
+.about a:visited {
+	color: #2A4E80;
 }
 
-footer a:hover {
-	color: #67DBFF;
+.about a:hover {
+	color: #2A4E80;
 }
 
-footer a:active {
-	color: #F3FF67;
+.about a:active {
+	color: #2A4E80;
 }
 
-footer a:focus {
-	color: #FF67ED;
+.about a:focus {
+	color: #2A4E80;
 }
 
 canvas#game_main {
@@ -187,6 +193,8 @@ canvas#game_bg {
 	font-size: 30px;
 	font-weight: normal;
 	font-family: 'Bangers', cursive;
+	color: #c50012;
+	text-shadow: 1px 1px 0px white;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-o-user-select: none;
@@ -228,14 +236,18 @@ canvas#game_bg {
 	user-select: none;
 }
 
+#start_game, #tweet, #fb {
+	letter-spacing: .08em;
+}
+
 #title {
 	font-size: 67px;
 	line-height: 100px;
 	font-weight: normal;
-	color: #c50012;
 	text-align: center;
 	margin: 0;
 	padding: 0;
+	color: #c50012;
 	text-shadow: 3px 3px 0px white;
 	position: relative;
 	top: 20px;
@@ -247,7 +259,7 @@ canvas#game_bg {
 	padding: 0;
 	text-align: center;
 	margin: -10px 0 10px;
-	text-shadow: 3px 3px 0px white;
+	text-shadow: 1px 1px 0px white;
 }
 
 #last_score, #high_score {
