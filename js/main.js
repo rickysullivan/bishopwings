@@ -169,7 +169,7 @@ mit.main = function() {
 
   // Share links
   var tweet = document.getElementById("tweet");
-  tweet.href='http://twitter.com/share?url=http://bronnycopter.com/&text=I\'m playing Bronny Copter at http://bronnycopter.com!&counturl=http://bronnycopter.com&count=horiztonal&via=rickysullivan&hastags=choppergate,meme,auspol,BronwynBishop,bronnycopter';
+  tweet.href='http://twitter.com/share?url=http://bronnycopter.com/&text=I\'m playing Bronny Copter!counturl=http://bronnycopter.com&count=horiztonal&via=rickysullivan&hastags=choppergate,meme,auspol,BronwynBishop,bronnycopter';
 
   var facebook = document.getElementById("fb");
   facebook.href='http://facebook.com/sharer.php?s=100&p[url]=http://bronnycopter.com/&p[title]=I\'m playing Bronny Copter at http://bronnycopter.com!';
