@@ -1,17 +1,17 @@
-# Bishop Wings
+# Bronny Copter
 
-![Bishop Wings](http://i.imgur.com/zYD37.png)
+![Bronny Copter](http://bronnycopter.com/img/about-image.jpg)
 
 
 ## About
 
 Another Flappy Wings/Helicopter clone in light of [#choppergate](https://twitter.com/hashtag/choppergate?src=hash)
 
-- Collect tax payer dollars.
+- Collect taxpayer dollars.
 - Avoid the papers. 
-- Watch out for Abbott, Slipper and Hockey.
-- Collect the champagne to blast the papers
-- Stars will make you invisible () 
+- Watch out for Abbott, Hockey and Shorten.
+- Collect the champagne to blast enemies.
+- Mastercard will make you invincible. 
 
 Hit Enter or Spacebar keys to (re)start the game.
 
