@@ -119,8 +119,6 @@ mit.main = function() {
     // Hide the Start Screen
     ui.start_screen.fadeOut();
 
-    console.log();
-
    // mit.Pappu.sprite.src = 'img/chopper-fly.png';
 
     // Start btn has been clicked
@@ -328,7 +326,7 @@ mit.main = function() {
 
     // Share
     var tweet = document.getElementById("tweet");
-    tweet.href='http://twitter.com/share?url=http://bronnycopter.com/&text=I just spent ' +Math.floor(mit.score)+ ' taxpayers\' dollars in Bronny Copter!&counturl=http://bronnycopter.com&count=horiztonal&via=rickysullivan&hashtags=choppergate,meme,auspol,BronwynBishop,bronnycopter';
+    tweet.href='http://twitter.com/share?url=http://bronnycopter.com/&text=I just spent ' +Math.floor(mit.score)+ ' taxpayers\' dollars!&counturl=http://bronnycopter.com&count=horiztonal&via=rickysullivan&hashtags=choppergate,meme,auspol,BronwynBishop,bronnycopter';
   
     var facebook = document.getElementById("fb");
     facebook.href='http://facebook.com/sharer.php?s=100&p[url]=http://bronnycopter.com/&p[title]=I just spent ' +Math.floor(mit.score)+ ' taxpayers\' dollars in Brony Copter!';
